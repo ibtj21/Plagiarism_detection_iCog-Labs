@@ -5,12 +5,10 @@
 A Python-based plagiarism detection system that leverages advanced string algorithms including **shingling**, **rolling hash**, and **Trie-based autocomplete**.  
 The project allows comparison of user input with multiple book datasets, provides **real-time autocomplete suggestions**, and generates a plagiarism score based on **hash matching** and **longest consecutive similarity**.
 
----
+
 
 ## Repository Structure
-
-```
-
+```bash
 Plagiarism_detection_iCog-Labs/
 ├── main.py
 ├── preprocessing.py
@@ -46,7 +44,6 @@ dataset/
 │   ├── Northanger Abbey_rolling_hashes.txt
 │   ├── Pride and Prejudice_rolling_hashes.txt
 │   ├── Sense and Sensibility_rolling_hashes.txt
-
 ```
 
 ---
@@ -130,8 +127,4 @@ python main.py
 
 MIT License
 
-```
-  
 
-Do you want me to add that?
-```
