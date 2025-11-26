@@ -67,8 +67,16 @@ Let:
 ### Final Score
 
 \[
-Score = \min\left(\frac{M}{T} \times \left(1 + \frac{L}{T}\right) \times 100,\ 100\right)
+\text{Score} =
+\min \left(
+\frac{M}{T}
+\times
+\left(1 + \frac{L}{T}\right)
+\times 100,
+\; 100
+\right)
 \]
+
 
 ### Quick Meaning
 - \(\frac{M}{T}\) → Overall similarity  
