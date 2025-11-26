@@ -65,18 +65,16 @@ Let:
 • **L** = Longest consecutive matching sequence  
 
 ### Final Score
-```bash
 \[
+\boxed{
 \text{Score} =
 \min \left(
 \frac{M}{T}
-\times
-\left(1 + \frac{L}{T}\right)
-\times 100,
-\; 100
+\left(1 + \frac{L}{T}\right) 100,
+100
 \right)
+}
 \]
-```
 
 ### Quick Meaning
 - \(\frac{M}{T}\) → Overall similarity  
