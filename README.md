@@ -65,16 +65,15 @@ Let:
 • **L** = Longest consecutive matching sequence  
 
 ### Final Score
-\[
-\boxed{
-\text{Score} =
-\min \left(
-\frac{M}{T}
-\left(1 + \frac{L}{T}\right) 100,
-100
-\right)
-}
-\]
+$$
+\begin{aligned}
+\text{Score} &= \min \Big( \\
+&\frac{M}{T} \\
+&\times \left(1 + \frac{L}{T}\right) \\
+&\times 100,\ 100 \Big)
+\end{aligned}
+$$
+
 
 ### Quick Meaning
 - \(\frac{M}{T}\) → Overall similarity  
