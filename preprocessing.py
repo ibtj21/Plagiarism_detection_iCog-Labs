@@ -1,13 +1,14 @@
 # preprocessing.py
 
-import os
-import re
+import os #for working with files and folders:to check if sth is in foldeer,to create new folder etc
+import re #for text pattern cleaning using regular expressions.Like removing extra spaces and punctuation
 
 MAX_WORDS = 50000  # ~200 pages
 
 def extract_main_content(text):
     """
     Extracts the main content of a Gutenberg book, removing headers and footers.
+    Finds and removes everything before and after the real book content.
     """
     start_marker = "*** START OF THE PROJECT GUTENBERG EBOOK"
     end_marker = "*** END OF THE PROJECT GUTENBERG EBOOK"
@@ -40,17 +41,18 @@ def clean_text(text, max_words=MAX_WORDS):
     words = text.split()
     if len(words) > max_words:
         words = words[:max_words]
-    text = " ".join(words)
+    text = " ".join(words)  #Take a list of words and combine them into one string with spaces between them
 
     # Lowercase
-    text = text.lower()
+    text = text.lower() 
 
     # Remove punctuation
-    text = re.sub(r'[^\w\s]', '', text)
+    text = re.sub(r'[^\w\s]', '', text) # Remove anything that is NOT a letter, NOT a number, and NOT a space
+                                        #\w	: Any letter or number (a–z, A–Z, 0–9, or _) , \s	Any space or whitespace , ^ :NOT
 
-    # Remove extra spaces
-    text = re.sub(r'\s+', ' ', text).strip()
-
+    # Remove extra spaces and replace with single space
+    text = re.sub(r'\s+', ' ', text).strip() 
+ 
     return text
 
 
@@ -63,8 +65,8 @@ def preprocess_dataset(dataset_dir="dataset/"):
     preprocessed_books = {}
 
     # Create preprocessed folder if it doesn't exist
-    preprocessed_dir = os.path.join(dataset_dir, "preprocessed")
-    os.makedirs(preprocessed_dir, exist_ok=True)
+    preprocessed_dir = os.path.join(dataset_dir, "preprocessed") #dataset_dir = "dataset/"
+    os.makedirs(preprocessed_dir, exist_ok=True) # preprocessed_dir = "dataset/preprocessed"
 
     for filename in os.listdir(dataset_dir):
         file_path = os.path.join(dataset_dir, filename)
@@ -89,7 +91,7 @@ def preprocess_dataset(dataset_dir="dataset/"):
 # ----------------- function for user input -----------------
 def preprocess_user_text(text, max_words=MAX_WORDS):
     """
-    Preprocesses user input text:
+    Preprocesses user input text: # same as clean_text but not extracting main content.
     - Lowercase
     - Remove punctuation
     - Remove extra spaces
