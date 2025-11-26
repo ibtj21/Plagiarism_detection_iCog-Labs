@@ -1,4 +1,3 @@
-```markdown
 # Plagiarism Detection - iCog Labs
 
 ## Project Description
