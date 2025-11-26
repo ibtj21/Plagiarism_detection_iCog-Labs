@@ -86,4 +86,29 @@ def preprocess_dataset(dataset_dir="dataset/"):
 
     return preprocessed_books
 
+# ----------------- function for user input -----------------
+def preprocess_user_text(text, max_words=MAX_WORDS):
+    """
+    Preprocesses user input text:
+    - Lowercase
+    - Remove punctuation
+    - Remove extra spaces
+    - Chop to max_words
+    """
+    # Lowercase
+    text = text.lower()
+
+    # Remove punctuation
+    text = re.sub(r'[^\w\s]', '', text)
+
+    # Remove extra spaces
+    text = re.sub(r'\s+', ' ', text).strip()
+
+    # Chop to max_words
+    words = text.split()
+    if len(words) > max_words:
+        words = words[:max_words]
+    text = " ".join(words)
+
+    return text
 

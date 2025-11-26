@@ -26,16 +26,12 @@ def generate_shingles_for_books(preprocessed_books, k=5):
         shingles = generate_shingles(text, k)
         all_shingles[filename] = shingles
     return all_shingles
+# ----------------- function for user input -----------------
+def generate_shingles_for_user_text(user_text, k=5):
+    """
+    Generate k-word shingles from a single user input text.
+    Returns a list of shingles.
+    """
+    return generate_shingles(user_text, k)
 
 
-# # Example usage
-# if __name__ == "__main__":
-#     from preprocessing import preprocess_dataset
-#     dataset_dir = "dataset/preprocessed"
-#     books = preprocess_dataset(dataset_dir)
-
-#     k = 5  # 5-word shingles
-#     shingles_dict = generate_shingles_for_books(books, k)
-
-#     for name, shingles in shingles_dict.items():
-#         print(f"{name}: {len(shingles)} shingles")
