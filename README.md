@@ -110,6 +110,7 @@ python main.py
 
 ---
 
+
 ## Possible Improvements
 
 * Integrate a **web or mobile UI** for better user experience.
