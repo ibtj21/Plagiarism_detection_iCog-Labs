@@ -94,11 +94,7 @@ git clone <repository_url>
 cd Plagiarism_detection_iCog-Labs
 ````
 
-2. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
+2. Install Requirments:
 
 3. Run the project:
 
@@ -110,15 +106,13 @@ python main.py
 
    * Type your text for plagiarism checking.
    * Autocomplete suggestions appear as you type.
-   * Type `submit` to finish and get plagiarism scores.
+   * press Enter when you finish typring to see the plagiarism score.
 
 ---
 
 ## Possible Improvements
 
 * Integrate a **web or mobile UI** for better user experience.
-* Enhance **autocomplete** with fuzzy matching or frequency-based suggestions.
-* Normalize scores to account for **generic English text matches**.
 
 ---
 
