@@ -65,7 +65,7 @@ Let:
 • **L** = Longest consecutive matching sequence  
 
 ### Final Score
-
+```bash
 \[
 \text{Score} =
 \min \left(
@@ -76,7 +76,7 @@ Let:
 \; 100
 \right)
 \]
-
+```
 
 ### Quick Meaning
 - \(\frac{M}{T}\) → Overall similarity  
