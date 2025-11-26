@@ -56,6 +56,31 @@ dataset/
 - Compute plagiarism scores including a **boost for longest consecutive matches**.
 - **Command-line interface** for user input and results.
 
+## Plagiarism Scoring Formula
+
+Let:
+
+• **M** = Number of matching shingles  
+• **T** = Total user shingles  
+• **L** = Longest consecutive matching sequence  
+
+### Final Score
+$$
+\begin{aligned}
+\text{Score} &= \min \Big( \\
+&\frac{M}{T} \\
+&\times \left(1 + \frac{L}{T}\right) \\
+&\times 100,\ 100 \Big)
+\end{aligned}
+$$
+
+
+### Quick Meaning
+- \(\frac{M}{T}\) → Overall similarity  
+- \(\frac{L}{T}\) → Strength of consecutive copying  
+- Score is capped at **100%**
+
+
 ---
 
 ## Dataset
@@ -109,6 +134,7 @@ python main.py
    * press Enter when you finish typring to see the plagiarism score.
 
 ---
+
 
 ## Possible Improvements
 
