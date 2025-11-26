@@ -1,6 +1,6 @@
 class TrieNode:
     def __init__(self):
-        self.children = {}  # dictionary instead of fixed array
+        self.children = {}  
         self.terminal = False
 
 def trie_insert(root, word):
