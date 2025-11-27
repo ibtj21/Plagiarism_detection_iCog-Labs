@@ -11,7 +11,7 @@ def generate_shingles(text, k=5):
     words = text.split()
     shingles = []
 
-    for i in range(len(words) - k + 1):
+    for i in range(len(words) - k + 1): # It slides a window of size k across the list
         shingle = " ".join(words[i:i+k])
         shingles.append(shingle)
 

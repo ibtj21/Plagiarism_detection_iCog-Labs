@@ -76,7 +76,7 @@ def main():
     print("\nComputing rolling hashes for all books...")
     hashes_dir = os.path.join(dataset_dir, "hashs")
     os.makedirs(hashes_dir, exist_ok=True)
-    hash_books_rolling(books, k=5, output_dir=hashes_dir)
+    hash_books_rolling(shingles_dict, output_dir=hashes_dir)
     print(f"All rolling hashes saved in '{hashes_dir}'")
 
     # 5️⃣ Build Trie for autocomplete
