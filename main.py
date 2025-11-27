@@ -83,7 +83,7 @@ def main():
     trie_root = build_trie_from_books(books)
 
     from prompt_toolkit import PromptSession
-    from prompt_toolkit.completion import Completer, Completion
+    from prompt_toolkit.completion import Completer, Completion # Makes it real-time autocomplete, instead of showing suggestions only after pressing Enter
 
     class TrieCompleter(Completer):
         def __init__(self, trie_root):
