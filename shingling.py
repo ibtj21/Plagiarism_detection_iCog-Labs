@@ -1,4 +1,7 @@
 # shingling.py
+# Shingling (breaking a text into small overlapping pieces of words)
+# Detects partial plagiarism: Captures copied segments even if only part of the text is reused
+# Works efficiently with hashing: Prepares text for rolling hash computation, allowing fast comparison
 
 def generate_shingles(text, k=5):
     """
@@ -15,7 +18,9 @@ def generate_shingles(text, k=5):
     return shingles
 
 
-def generate_shingles_for_books(preprocessed_books, k=5):
+def generate_shingles_for_books(preprocessed_books, k=5): 
+    # k=5 balances sensitivity(When k is too small,it catches evry small similarity even common expressions ) 
+    # and robustness(When k is too large,it catches specific and very large similarities ,dicreases false positives)
     """
     Generate shingles for all preprocessed books.
     preprocessed_books: dict {filename: text}
